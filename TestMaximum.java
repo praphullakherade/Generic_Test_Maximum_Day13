@@ -1,8 +1,9 @@
 package com.generictest;
 
 public class TestMaximum {
-    public static Float findMaximum(Float num1, Float num2, Float num3) {
-        Float max = num1;
+
+    public static Integer findMaximum(Integer num1, Integer num2, Integer num3) {
+        Integer max = num1;
         if (num2.compareTo(max)>0 && num2.compareTo(num3)>0) {
             max = num2;
         }
@@ -13,8 +14,6 @@ public class TestMaximum {
     }
 
     public static void main(String[] args) {
-        System.out.println("Welcome to Generics Test Maximum program");
-        Float maxNum = TestMaximum.findMaximum(15.5f,9.5f,10.5f);
-        System.out.print(maxNum);
+        System.out.println("Welcome Generics Maximum program");
     }
 }
