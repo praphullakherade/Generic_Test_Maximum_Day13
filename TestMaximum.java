@@ -2,18 +2,21 @@ package com.generictest;
 
 public class TestMaximum {
 
-    public static Integer findMaximum(Integer num1, Integer num2, Integer num3) {
-        Integer max = num1;
-        if (num2.compareTo(max)>0 && num2.compareTo(num3)>0) {
-            max = num2;
+    public static String findMaximum(String str1, String str2, String str3) {
+        String max = str1;
+        if (str2.compareTo(max)>0 && str2.compareTo(str3)>0) {
+            max = str2;
         }
-        if (num3.compareTo(max) > 0) {
-            max = num3;
+        if (str3.compareTo(max) > 0) {
+            max = str3;
         }
         return max;
     }
 
     public static void main(String[] args) {
-        System.out.println("Welcome Generics Maximum program");
+        System.out.println("Welcome To Generics Test Maximum program");
+        String xString = "Virat", yString = "John", zString = "Prafull";
+        String getMax = TestMaximum.findMaximum(xString,yString,zString);
+        System.out.print(getMax);
     }
 }
