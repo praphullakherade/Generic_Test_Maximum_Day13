@@ -2,21 +2,14 @@ package com.generictest;
 
 public class TestMaximum {
 
-    public static String findMaximum(String str1, String str2, String str3) {
-        String max = str1;
-        if (str2.compareTo(max)>0 && str2.compareTo(str3)>0) {
-            max = str2;
-        }
-        if (str3.compareTo(max) > 0) {
-            max = str3;
-        }
-        return max;
-    }
-
     public static void main(String[] args) {
-        System.out.println("Welcome To Generics Test Maximum program");
-        String xString = "Virat", yString = "John", zString = "Prafull";
-        String getMax = TestMaximum.findMaximum(xString,yString,zString);
-        System.out.print(getMax);
+        System.out.println("Welcome Generics Maximum program");
+        Integer[] a = { 5, 45, 4, 30, 40 };
+        Float[] b = { 12.49f, 19.61f, 18.3f, 14.36f, 13.7f};
+        String[] c = { "John", "Virat", "Rohit", "Sachin", "Prafull" };
+
+        System.out.println(new Refactor<Integer>(a).findMaximum());
+        System.out.println(new Refactor<Float>(b).findMaximum());
+        System.out.println(new Refactor<String>(c).findMaximum());
     }
 }
