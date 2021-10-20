@@ -1,27 +1,15 @@
 package com.generictest;
 
-public class Refactor<E extends Comparable> {
 
-    E[] inputArray;
-    public Refactor(E[] inputArray) {
-        this.inputArray = inputArray;
-    }
-
-    public E findMaximum() {
-        return findMaximum(inputArray);
-    }
-    public static <E extends Comparable> E findMaximum(E[] inputArray) {
-        E max = inputArray[0];
-        for (E element : inputArray) {
-            if (element.compareTo(max) > 0) {
-                max = element;
-            }
+public class Refactor <E>{
+    public static <E extends Comparable<E>>E findMaximum(E a, E b, E c) {
+        E max = a;
+        if (b.compareTo(max)>0 && b.compareTo(c)>0) {
+            max = b;
         }
-        printMax(max);
+        if (c.compareTo(max) > 0) {
+            max = c;
+        }
         return max;
     }
-    public static <E> void printMax(E max){
-        System.out.println("Maximum : "+max);
-    }
-
 }
